@@ -1,0 +1,3 @@
+Create new Nest project                 nest new project-name
+
+Start Nest project                      npm run start:dev  
