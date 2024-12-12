@@ -1,0 +1,4 @@
+POST GET http://localhost:300/users
+Content-Type: application/json
+
+{}
