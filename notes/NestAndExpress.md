@@ -54,3 +54,21 @@ export class UsersController {
   }
 }
 ```
+
+#### Summary
+
+###### In many cases it is considered best practise to avoid directly accessing the raw request object using @Req() in favor of using NestJS decorators like @Param(), @Query(), @Body(), etc. These decorators not only provide a cleaner and more readable way to access request data but also leverage the power of NestJS's abstraction layer, making your code more framework-agnostic and easier to maintain.
+
+#### Here's why using decorators is preferred:
+
+##### Readability and Maintainability: 
+###### Decorators make it clear what parts of the request are being used, improving the readability of your code.
+
+##### Type Safety: 
+###### By using decorators, you can leverage TypeScript's type system more effectively, ensuring that the data you're working with is correctly typed.
+
+##### Validation: 
+###### NestJS decorators integrate seamlessly with validation libraries like class-validator, allowing you to easily validate incoming request data.
+
+##### Separation of Concerns: 
+###### Using decorators helps to separate the concerns of extracting request data from the business logic, leading to cleaner and more modular code.
