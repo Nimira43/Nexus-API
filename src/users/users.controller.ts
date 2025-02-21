@@ -3,10 +3,10 @@ import { Controller, Get, Post, Patch, Put, Delete, Param, Query, Body } from '@
 @Controller('users')
 export class UsersController {
 
-  @Get('/:id')
-  public getUsers(@Param() params: any, @Query() query: any) {
-    console.log(params)
-    console.log(query)
+  @Get('/:id/optional?')
+  public getUsers(@Param('id') id: any, @Query('limit') limit:any ) {
+    console.log(typeof id)
+    console.log(typeof limit)
     return 'You sent a get request to users endpoint'
   }
   
