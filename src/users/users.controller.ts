@@ -1,16 +1,39 @@
-import { Controller, Get, Post, Patch, Put, Delete, Param, Query, Body, ParseIntPipe } from '@nestjs/common'
+import {
+  Controller,
+  Get,
+  Post,
+  Patch,
+  Put,
+  Delete,
+  Param,
+  Query,
+  Body,
+  ParseIntPipe,
+  DefaultValuePipe
+} from '@nestjs/common'
 
 @Controller('users')
 export class UsersController {
 
   @Get('/:id?')
   public getUsers(
-    @Param('id', ParseIntPipe) id: number | undefined,
-    @Query('limit', ParseIntPipe) limit: number,
-    @Query('page', ParseIntPipe) page: number
+    @Param(
+      'id',
+      ParseIntPipe
+    ) id: number | undefined,
+    @Query(
+      'limit',
+      new DefaultValuePipe(10),
+      ParseIntPipe
+    ) limit: number,
+    @Query(
+      'page',
+      new DefaultValuePipe(1),
+      ParseIntPipe
+    ) page: number
   ) {
-    console.log(typeof limit)
-    console.log(typeof page)
+    console.log(limit)
+    console.log(page)
     return 'You sent a get request to users endpoint'
   }
   
