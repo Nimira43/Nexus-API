@@ -3,7 +3,7 @@ import { Controller, Get, Post, Patch, Put, Delete, Param, Query, Body } from '@
 @Controller('users')
 export class UsersController {
 
-  @Get('/:id/optional?')
+  @Get('/:id/:optional?')
   public getUsers(@Param('id') id: any, @Query('limit') limit:any ) {
     console.log(typeof id)
     console.log(typeof limit)
