@@ -44,12 +44,8 @@ export class UsersController {
   @Post()
   public createUsers(
     @Body(new ValidationPipe()) request: CreateUserDto,
-    @Headers() headers: any,
-    @Ip() ip, any,
     )  {
     console.log(request)
-    console.log(headers)
-    console.log(ip)
     return 'You sent a post request to users endpoint'
   }
 }
