@@ -11,7 +11,8 @@ import {
   ParseIntPipe,
   DefaultValuePipe,
   Headers,
-  Ip
+  Ip,
+  ValidationPipe
 } from '@nestjs/common'
 
 @Controller('users')
