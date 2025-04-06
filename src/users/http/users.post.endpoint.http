@@ -5,6 +5,5 @@ Content-Type: application/json
   "firstName": "Leonardo",
   "lastName": "Benjamin",
   "email": "lenny@nimira.com",
-  "password": "ThisPassword@123",
-  "isAuth": true
+  "password": "ThisPassword@123"
 }
