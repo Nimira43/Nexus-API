@@ -35,5 +35,7 @@ export class UsersController {
   }
 
   @Patch()
-  public patchUser(@Body() patchUserDto: PatchUserDto) { }
+  public patchUser(@Body() patchUserDto: PatchUserDto) {
+    return patchUserDto
+  }
 }

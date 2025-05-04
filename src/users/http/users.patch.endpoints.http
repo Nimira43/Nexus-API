@@ -1,0 +1,7 @@
+PATCH http://localhost:3000/users
+Content-Type: application/json
+
+{
+  "email": "lenny@nimira.com",
+  "password": "ThisPassword@123"
+}
