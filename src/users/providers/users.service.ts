@@ -1,9 +1,10 @@
 import { Injectable } from '@nestjs/common'
+import { GetUsersParamDto } from '../dtos/get-users-param.dto'
 
 @Injectable()
 export class UsersService{
 
-  public findAll() {
+  public findAll(getUserParamDto: GetUsersParamDto) {
     return [
       {
         firstName: 'Nelson',
@@ -15,5 +16,4 @@ export class UsersService{
       },
     ]
   }
-
 }
