@@ -1,1 +1,3 @@
-export class UsersService{}
+import { Injectable } from '@nestjs/common'
+
+export class UsersService{ }
