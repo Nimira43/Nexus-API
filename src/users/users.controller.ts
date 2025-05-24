@@ -24,9 +24,8 @@ export class UsersController {
       ParseIntPipe
     ) page: number
   ) {
-    console.log(getUserParamDto)
-
-    return 'You sent a get request to users endpoint'
+    
+    return this.usersService.findAll(getUserParamDto, limit, page)
   }
   
   @Post()
