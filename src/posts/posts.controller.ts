@@ -1,4 +1,4 @@
-import { Controller, Get } from '@nestjs/common'
+import { Controller, Get, Param } from '@nestjs/common'
 import { PostsService } from './providers/posts.service';
 
 @Controller('posts')
@@ -9,5 +9,5 @@ export class PostsController {
   
   // Practise Only - Inter Dependencies
   @Get()
-  public getPosts() { }
+  public getPosts(@Param('userId') userID: string) { }
 }
