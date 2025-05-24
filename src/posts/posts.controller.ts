@@ -8,6 +8,8 @@ export class PostsController {
   ) { }
   
   // Practise Only - Inter Dependencies
-  @Get()
-  public getPosts(@Param('userId') userID: string) { }
+  @Get('/:userId?')
+  public getPosts(@Param('userId') userId: string) {
+    return this.postService.findAll(userId)
+  }
 }
