@@ -4,7 +4,11 @@ import { GetUsersParamDto } from '../dtos/get-users-param.dto'
 @Injectable()
 export class UsersService{
 
-  public findAll(getUserParamDto: GetUsersParamDto) {
+  public findAll(
+    getUserParamDto: GetUsersParamDto,
+    limit: number, 
+    page: number,
+  ) {
     return [
       {
         firstName: 'Nelson',
