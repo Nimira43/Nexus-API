@@ -16,8 +16,16 @@ export class UsersService{
       },
       {
         firstName: 'Ayrton',
-        email: 'aryton@pretenddb.com'
+        email: 'ayrton@pretenddb.com'
       },
     ]
+  }
+
+  public findOneById(id: number) { 
+    return {
+      id: 100,
+      firstName: 'Ayrton',
+      email: 'ayrton@pretenddb.com',
+    }
   }
 }
