@@ -11,21 +11,21 @@ export class UsersService{
   ) {
     return [
       {
-        firstName: 'Nelson',
-        email: 'nelson@mockdb.com'
+        firstName: 'Elsie',
+        email: 'elsie@admin.com'
       },
       {
-        firstName: 'Ayrton',
-        email: 'ayrton@pretenddb.com'
+        firstName: 'Fred',
+        email: 'fred@user.com'
       },
     ]
   }
 
   public findOneById(id: string) { 
     return {
-      id: 100,
-      firstName: 'Ayrton',
-      email: 'ayrton@pretenddb.com',
+      id: 1234,
+      firstName: 'Fred',
+      email: 'fred@user.com',
     }
   }
 }
