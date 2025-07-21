@@ -11,4 +11,8 @@ export class AuthService {
     const user = this.usersService.findOneById('1234')
     return 'SAMPLE_TOKEN'
   }
+
+  public isAuth() {
+    return true
+  }
 }
