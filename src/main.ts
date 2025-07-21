@@ -10,6 +10,9 @@ async function bootstrap() {
     forbidNonWhitelisted: true,
     transform: true, 
   }))
+
+  const config = new DocumentBuilder()
+
   await app.listen(process.env.PORT ?? 3000)
 }
 bootstrap()
