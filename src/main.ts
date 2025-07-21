@@ -11,7 +11,8 @@ async function bootstrap() {
     transform: true, 
   }))
 
-  const config = new DocumentBuilder()
+  const config = new DocumentBuilder().setVersion('1.0').build()
+  const document = SwaggerModule.createDocument(app, config)
 
   await app.listen(process.env.PORT ?? 3000)
 }
