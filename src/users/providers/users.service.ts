@@ -29,11 +29,11 @@ export class UsersService{
     ]
   }
 
-  // public findOneById(id: string) { 
-  //   return {
-  //     id: 1234,
-  //     firstName: 'Fred',
-  //     email: 'fred@user.com',
-  //   }
-  // }
+  public findOneById(id: string) { 
+    return {
+      id: 1234,
+      firstName: 'Fred',
+      email: 'fred@user.com',
+    }
+  }
 }
