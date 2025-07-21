@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common'
+import { Injectable, forwardRef, Inject } from '@nestjs/common'
 import { GetUsersParamDto } from '../dtos/get-users-param.dto'
 import { AuthService } from 'src/auth/providers/auth.service'
 
@@ -6,7 +6,7 @@ import { AuthService } from 'src/auth/providers/auth.service'
 export class UsersService{
   constructor(
     private readonly authService: AuthService
-  )
+  ) {}
 
   public findAll(
     getUserParamDto: GetUsersParamDto,
