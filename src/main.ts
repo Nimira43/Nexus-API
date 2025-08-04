@@ -18,6 +18,7 @@ async function bootstrap() {
   .setDescription('Base API URL - http://localhost:3000')
   .setTermsOfService('https://localhost:3000/terms-of-service')
   .setLicense('MIT Licence', 'https://github.com/Nimira43/Nexus-API/blob/main/notes/license.txt')
+  .addServer('http://localhost:3000')
   .setVersion('1.0')
   .build()
     
