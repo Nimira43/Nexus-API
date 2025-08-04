@@ -3,7 +3,9 @@ import { Type } from 'class-transformer'
 import { ApiPropertyOptional } from '@nestjs/swagger'
 
 export class GetUsersParamDto {
-  @ApiPropertyOptional()
+  @ApiPropertyOptional({
+    description: 'Get user with a specific id',
+  })
   @IsOptional()
   @IsInt()
   @Type(() => Number)
