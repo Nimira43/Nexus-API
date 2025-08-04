@@ -18,6 +18,7 @@ export class UsersController {
     type: 'number',
     required: false,
     description: 'The number of entries returned per query',
+    example: 10,
   })
   public getUsers(
     @Param() getUserParamDto: GetUsersParamDto,
