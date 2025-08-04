@@ -16,7 +16,8 @@ export class UsersController {
   @ApiQuery({
     name: 'limit',
     type: 'number',
-    required: false
+    required: false,
+    description: 'The number of entries returned per query',
   })
   public getUsers(
     @Param() getUserParamDto: GetUsersParamDto,
