@@ -16,6 +16,7 @@ async function bootstrap() {
   const config = new DocumentBuilder()
   .setTitle('Nexus API')
   .setDescription('Base API URL - http://localhost:3000')
+  .setTermsOfService('https://localhost:3000/terms-of-service')
   .setVersion('1.0')
   .build()
     
