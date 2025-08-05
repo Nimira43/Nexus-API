@@ -4,7 +4,7 @@ import { ApiPropertyOptional } from '@nestjs/swagger'
 
 export class GetUsersParamDto {
   @ApiPropertyOptional({
-    description: 'Get user with a specific id',
+    description: 'Get user with a specific id.',
     example: 1234
   })
   @IsOptional()

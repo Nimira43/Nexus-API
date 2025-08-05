@@ -13,19 +13,21 @@ export class UsersController {
   ) { }
 
   @Get('/:id?')
-  @ApiOperation({})
+  @ApiOperation({
+    summary: 'Fetches a list of registered users on the appplication.',
+  })
   @ApiQuery({
     name: 'limit',
     type: 'number',
     required: false,
-    description: 'The number of entries returned per query',
+    description: 'The number of entries returned per query.',
     example: 10,
   })
   @ApiQuery({
     name: 'page',
     type: 'number',
     required: false,
-    description: 'The position of the page number that you want the API to return',
+    description: 'The position of the page number that you want the API to return.',
     example: 1,
   })
   public getUsers(
@@ -51,7 +53,7 @@ export class UsersController {
     )  {
     console.log(createUserDto instanceof CreateUserDto)
 
-    return 'You sent a post request to users endpoint'
+    return 'You sent a post request to users endpoint.'
   }
 
   @Patch()
