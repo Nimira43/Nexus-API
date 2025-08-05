@@ -3,7 +3,7 @@ import { CreateUserDto } from './dtos/create-user.dto'
 import { GetUsersParamDto } from './dtos/get-users-param.dto'
 import { PatchUserDto } from './dtos/patch-user.dto'
 import { UsersService } from './providers/users.service'
-import { ApiOperation, ApiQuery, ApiTags } from '@nestjs/swagger'
+import { ApiOperation, ApiQuery, ApiResponse, ApiTags } from '@nestjs/swagger'
 
 @Controller('users')
 @ApiTags('Users')
@@ -15,6 +15,9 @@ export class UsersController {
   @Get('/:id?')
   @ApiOperation({
     summary: 'Fetches a list of registered users on the appplication.',
+  })
+  @ApiResponse({
+    
   })
   @ApiQuery({
     name: 'limit',
