@@ -3,7 +3,7 @@ import { CreateUserDto } from './dtos/create-user.dto'
 import { GetUsersParamDto } from './dtos/get-users-param.dto'
 import { PatchUserDto } from './dtos/patch-user.dto'
 import { UsersService } from './providers/users.service'
-import { ApiQuery, ApiTags } from '@nestjs/swagger'
+import { ApiOperation, ApiQuery, ApiTags } from '@nestjs/swagger'
 
 @Controller('users')
 @ApiTags('Users')
@@ -13,6 +13,7 @@ export class UsersController {
   ) { }
 
   @Get('/:id?')
+  @ApiOperation({})
   @ApiQuery({
     name: 'limit',
     type: 'number',
