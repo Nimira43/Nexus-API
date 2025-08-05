@@ -20,6 +20,13 @@ export class UsersController {
     description: 'The number of entries returned per query',
     example: 10,
   })
+  @ApiQuery({
+    name: 'page',
+    type: 'number',
+    required: false,
+    description: 'The position of the page number that you want the API to return',
+    example: 1,
+  })
   public getUsers(
     @Param() getUserParamDto: GetUsersParamDto,
     @Query(
