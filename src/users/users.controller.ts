@@ -17,7 +17,8 @@ export class UsersController {
     summary: 'Fetches a list of registered users on the appplication.',
   })
   @ApiResponse({
-    
+    status: 200,
+    description: 'Users fetched successfully based on the query.'
   })
   @ApiQuery({
     name: 'limit',
