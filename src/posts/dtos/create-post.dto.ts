@@ -9,8 +9,9 @@ export class CreatePostDto {
   title: string
 
   @IsEnum(postType)
+  @IsNotEmpty()
   postType: postType
-  
+
   slug: string
   status: postStatus
   content?: string
