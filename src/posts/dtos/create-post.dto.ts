@@ -42,7 +42,10 @@ export class CreatePostDto {
   @IsNotEmpty()
   status: postStatus
 
-  @ApiPropertyOptional()
+  @ApiPropertyOptional({
+    description: "This is the content of the post",
+    example: "Echoes of legacy ripple through circuits and code."
+  })
   @IsString()
   @IsOptional()
   content?: string
