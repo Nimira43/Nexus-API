@@ -102,12 +102,10 @@ export class CreatePostDto {
         value: {
           type: "any",
           description: "Any value that you want to save to the key.",
-          example: "sidebarEnabled"
+          example: true
         },
-      }
+      },
     },
-    description: "",
-    example: ""
   })
   @IsOptional()
   @IsArray()
