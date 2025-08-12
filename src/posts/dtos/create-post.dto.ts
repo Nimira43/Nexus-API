@@ -17,7 +17,7 @@ export class CreatePostDto {
 
   @ApiProperty({
     enum: postType,
-    description: "Possible post types include 'post', 'page', 'story' or 'series'."
+    description: "Possible post types include: 'post', 'page', 'story' or 'series'."
   })
   @IsEnum(postType)
   @IsNotEmpty()
@@ -34,6 +34,10 @@ export class CreatePostDto {
   })
   slug: string
 
+  @ApiProperty({
+    enum: postStatus,
+    description: "Possible status types include: 'draft', 'scheduled', 'review' or 'published'."
+  })
   @IsEnum(postStatus)
   @IsNotEmpty()
   status: postStatus
