@@ -6,4 +6,7 @@ export class CreatePostDto {
   postType: postType
   slug: string
   status: postStatus
+  content?: string
+  schema?: string
+  featuredImageUrl?: string
 }
