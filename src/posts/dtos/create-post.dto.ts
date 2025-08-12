@@ -49,11 +49,11 @@ export class CreatePostDto {
   })
   tags?: string[]
   
+  
   metaOptions: [
     {
       key: 'sidebarEnabled'
       value: true
     }
   ]
-
 }
