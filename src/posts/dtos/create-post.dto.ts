@@ -50,6 +50,10 @@ export class CreatePostDto {
   @IsOptional()
   content?: string
   
+  @ApiPropertyOptional({
+    description: "Serialise your JSON object or else a validation error will be thrown.",
+    example: "{\r\n \"@context\": \"https:\/\/schema.org\",\r\n \"@type\": \"Person\"\r\n}"
+  })
   @IsOptional()
   @IsJSON()
   schema?: string
