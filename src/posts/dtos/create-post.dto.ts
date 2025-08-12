@@ -7,8 +7,8 @@ import { ApiProperty } from '@nestjs/swagger'
 
 export class CreatePostDto {
   @ApiProperty({
-    example:'This Is An Example Title',
-    description: 'This is the title for the blog post.',
+    example:"This Is An Example Title",
+    description: "This is the title for the blog post.",
   })
   @IsString()
   @MinLength(4)
@@ -17,19 +17,20 @@ export class CreatePostDto {
 
   @ApiProperty({
     enum: postType,
-    description: 'Possible post types include "post", "page", "story" or "series".'
+    description: "Possible post types include 'post', 'page', 'story' or 'series'."
   })
   @IsEnum(postType)
   @IsNotEmpty()
   postType: postType
 
-  @ApiProperty(){
-    
-  }
+  @ApiProperty({
+    description: "Example slug (url): 'example-url'",
+    example: "my-blog-post"
+  })
   @IsString()
   @IsNotEmpty()
   @Matches(/^[a-z0-9]+(?:-[a-z0-9]+)*$/, {
-    message: 'A slug should be all small letters and use only "-" and no spaces. Example: "my-url".'
+    message: "A slug should be all small letters and use only '-' and no spaces. Example: 'my-url'."
   })
   slug: string
 
