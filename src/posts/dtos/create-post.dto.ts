@@ -51,11 +51,6 @@ export class CreatePostDto {
   tags?: string[]
   
   @IsOptional()
-  @IsArray(CreatePostMetaOptionsDto)
-  metaOptions: [
-    {
-      key: 'sidebarEnabled'
-      value: true
-    }
-  ]
+  @IsArray()
+  metaOptions: CreatePostMetaOptionsDto[]
 }
