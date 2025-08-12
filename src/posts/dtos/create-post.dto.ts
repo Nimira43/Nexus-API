@@ -23,6 +23,9 @@ export class CreatePostDto {
   @IsNotEmpty()
   postType: postType
 
+  @ApiProperty(){
+    
+  }
   @IsString()
   @IsNotEmpty()
   @Matches(/^[a-z0-9]+(?:-[a-z0-9]+)*$/, {
