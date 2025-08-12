@@ -17,7 +17,7 @@ export class CreatePostDto {
 
   @ApiProperty({
     enum: postType,
-    description: 'Possible post types include "post", "page", "story" or "story"'
+    description: 'Possible post types include "post", "page", "story" or "series".'
   })
   @IsEnum(postType)
   @IsNotEmpty()
