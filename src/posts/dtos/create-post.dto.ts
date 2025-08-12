@@ -93,6 +93,12 @@ export class CreatePostDto {
     required: false,
     items: {
       type: "object",
+      properties: {
+        key: {
+          type: "string",
+          description: "The key can be any string identifier for your meta option."
+        }
+      }
     },
     description: "",
     example: ""
