@@ -1,4 +1,4 @@
-import { IsEnum, IsNotEmpty, IsOptional, IsString, Matches, MinLength } from 'class-validator'
+import { IsEnum, IsJSON, IsNotEmpty, IsOptional, IsString, Matches, MinLength } from 'class-validator'
 import { postStatus } from '../enums/postStatus.enum'
 import { postType } from '../enums/postType.enum'
 
@@ -27,7 +27,7 @@ export class CreatePostDto {
   @IsOptional()
   content?: string
 
-  @IsString()
+  @IsJSON()
   @IsOptional()
   schema?: string
   
