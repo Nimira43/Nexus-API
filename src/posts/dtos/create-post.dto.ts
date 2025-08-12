@@ -3,7 +3,7 @@ import { postStatus } from '../enums/postStatus.enum'
 import { postType } from '../enums/postType.enum'
 import { CreatePostMetaOptionsDto } from './create-post-meta-options.dto'
 import { Type } from 'class-transformer'
-import { ApiProperty } from '@nestjs/swagger'
+import { ApiProperty, ApiPropertyOptional } from '@nestjs/swagger'
 
 export class CreatePostDto {
   @ApiProperty({
@@ -42,6 +42,7 @@ export class CreatePostDto {
   @IsNotEmpty()
   status: postStatus
 
+  @ApiPropertyOptional()
   @IsString()
   @IsOptional()
   content?: string
