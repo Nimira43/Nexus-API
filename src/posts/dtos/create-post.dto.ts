@@ -1,4 +1,4 @@
-import { IsEnum, IsJSON, IsNotEmpty, IsOptional, IsString, IsUrl, Matches, MinLength } from 'class-validator'
+import { IsEnum, IsISO8601, IsJSON, IsNotEmpty, IsOptional, IsString, IsUrl, Matches, MinLength } from 'class-validator'
 import { postStatus } from '../enums/postStatus.enum'
 import { postType } from '../enums/postType.enum'
 
@@ -35,6 +35,7 @@ export class CreatePostDto {
   @IsUrl()
   featuredImageUrl?: string
   
+  @IsISO8601()
   publishOn?: Date
   
   @IsString()
