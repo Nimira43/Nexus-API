@@ -1,4 +1,4 @@
-import { IsEnum, IsISO8601, IsJSON, IsNotEmpty, IsOptional, IsString, IsUrl, Matches, MinLength } from 'class-validator'
+import { IsArray, IsEnum, IsISO8601, IsJSON, IsNotEmpty, IsOptional, IsString, IsUrl, Matches, MinLength } from 'class-validator'
 import { postStatus } from '../enums/postStatus.enum'
 import { postType } from '../enums/postType.enum'
 
@@ -39,8 +39,8 @@ export class CreatePostDto {
   @IsOptional()
   publishOn?: Date
   
-  @IsString()
   @IsOptional()
+  @IsArray()
   tags?: string[]
   
   metaOptions: [
