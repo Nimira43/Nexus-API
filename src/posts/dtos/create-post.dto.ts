@@ -9,4 +9,13 @@ export class CreatePostDto {
   content?: string
   schema?: string
   featuredImageUrl?: string
+  publishOn?: Date
+  tags?: string[]
+  metaOptions: [
+    {
+      key: 'sidebarEnabled'
+      value: true
+    }
+  ]
+
 }
