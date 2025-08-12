@@ -36,6 +36,7 @@ export class CreatePostDto {
   featuredImageUrl?: string
   
   @IsISO8601()
+  @IsOptional()
   publishOn?: Date
   
   @IsString()
