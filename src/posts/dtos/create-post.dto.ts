@@ -88,6 +88,15 @@ export class CreatePostDto {
   })
   tags?: string[]
   
+  @ApiPropertyOptional({
+    type: "array",
+    required: false,
+    items: {
+
+    },
+    description: "",
+    example: ""
+  })
   @IsOptional()
   @IsArray()
   @ValidateNested({
