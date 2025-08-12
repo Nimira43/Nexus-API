@@ -1,11 +1,13 @@
-import { IsString } from 'class-validator'
+import { IsNotEmpty, IsString, MinLength } from 'class-validator'
 import { postStatus } from '../enums/postStatus.enum'
 import { postType } from '../enums/postType.enum'
 
 export class CreatePostDto {
   @IsString()
+  @MinLength(4)
+  @IsNotEmpty()
   title: string
-  
+
   postType: postType
   slug: string
   status: postStatus
