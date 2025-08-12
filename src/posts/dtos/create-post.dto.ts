@@ -41,6 +41,9 @@ export class CreatePostDto {
   
   @IsOptional()
   @IsArray()
+  @IsString({
+    each: true
+  })
   tags?: string[]
   
   metaOptions: [
