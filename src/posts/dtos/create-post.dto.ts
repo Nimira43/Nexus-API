@@ -12,7 +12,10 @@ export class CreatePostDto {
   @IsNotEmpty()
   postType: postType
 
+  @IsString()
+  @IsNotEmpty()
   slug: string
+
   status: postStatus
   content?: string
   schema?: string
