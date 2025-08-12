@@ -44,6 +44,9 @@ export class CreatePostDto {
   @IsString({
     each: true
   })
+  @MinLength(3, {
+    each: true
+  })
   tags?: string[]
   
   metaOptions: [
