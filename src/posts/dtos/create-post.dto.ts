@@ -96,7 +96,8 @@ export class CreatePostDto {
       properties: {
         key: {
           type: "string",
-          description: "The key can be any string identifier for your meta option."
+          description: "The key can be any string identifier for your meta option.",
+          example: "sidebarEnabled"
         }
       }
     },
