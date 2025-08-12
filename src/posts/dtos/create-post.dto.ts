@@ -19,7 +19,11 @@ export class CreatePostDto {
   })
   slug: string
 
+  @IsEnum(postStatus)
+  @IsNotEmpty()
   status: postStatus
+
+  
   content?: string
   schema?: string
   featuredImageUrl?: string
