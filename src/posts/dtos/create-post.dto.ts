@@ -58,6 +58,10 @@ export class CreatePostDto {
   @IsJSON()
   schema?: string
   
+  @ApiPropertyOptional({
+    description: "Featured image for your blog post.",
+    example: "http://localhost.com/images/image1.jpg"
+  })
   @IsOptional()
   @IsUrl()
   featuredImageUrl?: string
