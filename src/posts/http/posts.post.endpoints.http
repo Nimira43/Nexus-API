@@ -1,1 +1,11 @@
 POST http://localhost:3000/posts
+Content-Type: application/json
+
+{
+  "title": "Ayrton Senna's Legacy",
+  "postType": "post",
+  "slug": "historic-formula-one",
+  "status": "draft",
+  "content": "Fearless. Visionary. Ruthless. Spiritual. Rainmaster. Maverick. Intense. Elegant. Obsessive. Transcendent.",
+  "schema": "{\r\n \"@content\": \"https:\/\/schema.org\",\r\n \"@type\": \"Person\"\r\n}"
+}
