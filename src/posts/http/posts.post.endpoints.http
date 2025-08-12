@@ -10,4 +10,11 @@ Content-Type: application/json
   "schema": "{\r\n \"@content\": \"https:\/\/schema.org\",\r\n \"@type\": \"Person\"\r\n}",
   "featuredImageUrl": "http://localhost.com/images/image1.jpg",
   "publishOn": "2025-08-10T22:18:49+0000",
+  "tags": ["champion", "mclaren"],
+  "metaOptions": [
+    {
+      "key": "testKey",
+      "value": 20
+    }
+  ]
 }
