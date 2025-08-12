@@ -74,6 +74,10 @@ export class CreatePostDto {
   @IsOptional()
   publishOn?: Date
   
+  @ApiPropertyOptional({
+    description: "Array of tags passed as string values.",
+    example: ['world', 'news', 'sport', 'health']
+  })
   @IsOptional()
   @IsArray()
   @IsString({
