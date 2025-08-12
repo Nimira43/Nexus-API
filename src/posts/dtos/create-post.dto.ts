@@ -7,7 +7,7 @@ import { ApiProperty, ApiPropertyOptional } from '@nestjs/swagger'
 
 export class CreatePostDto {
   @ApiProperty({
-    example:"This Is An Example Title",
+    example:"An Example Title",
     description: "This is the title for the blog post.",
   })
   @IsString()
