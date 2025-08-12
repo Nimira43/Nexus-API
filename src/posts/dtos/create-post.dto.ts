@@ -1,4 +1,4 @@
-import { IsArray, IsEnum, IsISO8601, IsJSON, IsNotEmpty, IsOptional, IsString, IsUrl, Matches, MinLength } from 'class-validator'
+import { IsArray, IsEnum, IsISO8601, IsJSON, IsNotEmpty, IsOptional, IsString, IsUrl, Matches, MinLength, ValidateNested } from 'class-validator'
 import { postStatus } from '../enums/postStatus.enum'
 import { postType } from '../enums/postType.enum'
 import { CreatePostMetaOptionsDto } from './create-post-meta-options.dto'
@@ -52,5 +52,8 @@ export class CreatePostDto {
   
   @IsOptional()
   @IsArray()
+  @ValidateNested({
+    each: true
+  })
   metaOptions: CreatePostMetaOptionsDto[]
 }
