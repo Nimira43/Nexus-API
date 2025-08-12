@@ -1,4 +1,4 @@
-import { IsEnum, IsNotEmpty, IsString, MinLength } from 'class-validator'
+import { IsEnum, IsNotEmpty, IsString, Matches, MinLength } from 'class-validator'
 import { postStatus } from '../enums/postStatus.enum'
 import { postType } from '../enums/postType.enum'
 
@@ -14,6 +14,9 @@ export class CreatePostDto {
 
   @IsString()
   @IsNotEmpty()
+  @Matches(/^[a-z0-9]+(?:-[a-z0-9]+)*$/, {
+    message: 'A slug should be all small letters and use only "-" and no spaces. Example: "my-url".'
+  })
   slug: string
 
   status: postStatus
