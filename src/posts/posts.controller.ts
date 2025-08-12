@@ -1,4 +1,4 @@
-import { Controller, Get, Param } from '@nestjs/common'
+import { Controller, Get, Param, Post } from '@nestjs/common'
 import { PostsService } from './providers/posts.service'
 import { ApiTags } from '@nestjs/swagger'
 
@@ -14,4 +14,9 @@ export class PostsController {
   public getPosts(@Param('userId') userId: string) {
     return this.postService.findAll(userId)
   }
+
+  @Post()
+  public createPost() {}
 }
+
+
