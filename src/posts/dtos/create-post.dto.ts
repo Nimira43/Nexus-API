@@ -1,4 +1,4 @@
-import { IsEnum, IsNotEmpty, IsString, Matches, MinLength } from 'class-validator'
+import { IsEnum, IsNotEmpty, IsOptional, IsString, Matches, MinLength } from 'class-validator'
 import { postStatus } from '../enums/postStatus.enum'
 import { postType } from '../enums/postType.enum'
 
@@ -23,12 +23,24 @@ export class CreatePostDto {
   @IsNotEmpty()
   status: postStatus
 
-  
+  @IsString()
+  @IsOptional()
   content?: string
+
+  @IsString()
+  @IsOptional()
   schema?: string
+  
+  @IsString()
+  @IsOptional()
   featuredImageUrl?: string
+  
   publishOn?: Date
+  
+  @IsString()
+  @IsOptional()
   tags?: string[]
+  
   metaOptions: [
     {
       key: 'sidebarEnabled'
