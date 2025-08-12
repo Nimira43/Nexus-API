@@ -49,7 +49,7 @@ export class CreatePostDto {
   })
   tags?: string[]
   
-  
+  @IsOptional()
   metaOptions: [
     {
       key: 'sidebarEnabled'
