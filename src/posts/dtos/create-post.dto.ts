@@ -66,6 +66,10 @@ export class CreatePostDto {
   @IsUrl()
   featuredImageUrl?: string
   
+  @ApiPropertyOptional({
+    description: "The date on which the blog post is published.",
+    example: "2025-08-10T22:18:49+0000"
+  })
   @IsISO8601()
   @IsOptional()
   publishOn?: Date
