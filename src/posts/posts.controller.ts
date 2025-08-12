@@ -1,4 +1,4 @@
-import { Controller, Get, Param, Post } from '@nestjs/common'
+import { Body, Controller, Get, Param, Post } from '@nestjs/common'
 import { PostsService } from './providers/posts.service'
 import { ApiTags } from '@nestjs/swagger'
 
@@ -16,7 +16,7 @@ export class PostsController {
   }
 
   @Post()
-  public createPost() {}
+  public createPost(@Body()) {}
 }
 
 
