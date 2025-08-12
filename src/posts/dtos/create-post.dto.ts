@@ -98,7 +98,12 @@ export class CreatePostDto {
           type: "string",
           description: "The key can be any string identifier for your meta option.",
           example: "sidebarEnabled"
-        }
+        },
+        value: {
+          type: "any",
+          description: "Any value that you want to save to the key.",
+          example: "sidebarEnabled"
+        },
       }
     },
     description: "",
