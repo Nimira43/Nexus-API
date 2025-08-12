@@ -92,7 +92,7 @@ export class CreatePostDto {
     type: "array",
     required: false,
     items: {
-
+      type: "object",
     },
     description: "",
     example: ""
