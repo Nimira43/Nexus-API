@@ -6,7 +6,9 @@ import { Type } from 'class-transformer'
 import { ApiProperty } from '@nestjs/swagger'
 
 export class CreatePostDto {
-  @ApiProperty()
+  @ApiProperty({
+    description: 'This is the title for the blog post.',
+  })
   @IsString()
   @MinLength(4)
   @IsNotEmpty()
