@@ -14,7 +14,7 @@ export class UsersController {
 
   @Get('/:id?')
   @ApiOperation({
-    summary: 'Fetches a list of registered users on the appplication.',
+    summary: 'Fetches a list of registered users on the application.',
   })
   @ApiResponse({
     status: 200,
