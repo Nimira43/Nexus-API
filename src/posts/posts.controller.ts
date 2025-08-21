@@ -29,7 +29,7 @@ export class PostsController {
   }
 
   @Patch()
-  public updatePost(){}
+  public updatePost(@Body() patchPostsDto: any) {}
 }
 
 
