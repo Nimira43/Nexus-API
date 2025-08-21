@@ -29,7 +29,9 @@ export class PostsController {
   }
 
   @Patch()
-  public updatePost(@Body() patchPostsDto: any) {}
+  public updatePost(@Body() patchPostsDto: any) {
+    console.log(patchPostDto)
+  }
 }
 
 
