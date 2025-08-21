@@ -31,7 +31,7 @@ export class PostsController {
 
   @Patch()
   public updatePost(@Body() patchPostsDto: PatchPostDto) {
-    console.log(patchPostDto)
+    console.log(patchPostsDto)
   }
 }
 
