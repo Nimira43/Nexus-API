@@ -15,7 +15,10 @@ export class PostsController {
   public getPosts(@Param('userId') userId: string) {
     return this.postService.findAll(userId)
   }
-  @ApiResponse({})
+  @ApiResponse({
+    status: 201,
+    description: 'You get a 201 response if your post is created successfully.'
+  })
   @Post()
   public createPost(@Body() createPostDto: CreatePostDto) {
     console.log(createPostDto)
