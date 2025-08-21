@@ -29,6 +29,13 @@ export class PostsController {
     console.log(createPostDto)
   }
 
+  @ApiOperation({
+    summary: 'Updates an existing blog post.'
+  })
+  @ApiResponse({
+    status: 209,
+    description: 'You get a 200 response if your post is updated successfully.'
+  })
   @Patch()
   public updatePost(@Body() patchPostsDto: PatchPostDto) {
     console.log(patchPostsDto)
