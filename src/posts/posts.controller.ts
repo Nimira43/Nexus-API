@@ -11,7 +11,7 @@ export class PostsController {
     private readonly postService: PostsService
   ) { }
   
-  // Practise Only - Inter Dependencies
+  // Practise Only
   @Get('/:userId?')
   public getPosts(@Param('userId') userId: string) {
     return this.postService.findAll(userId)
