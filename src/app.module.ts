@@ -15,15 +15,19 @@ import { ConfigModule } from '@nestjs/config'
     UsersModule, 
     PostsModule, 
     AuthModule, 
-    TypeOrmModule.forRoot({
-      type: 'postgres',
-      entities: [],
-      synchronize: true,
-      port: 5432,
-      username: 'postgres',
-      password: process.env.DB_PASSWORD,
-      host: 'localhost',
-      database: 'nexus-api'
+    TypeOrmModule.forRootAsync({
+      imports: [],
+      inject: [],
+      useFactory: () => ({
+        type: 'postgres',
+        entities: [],
+        synchronize: true,
+        port: parseInt(process.env.DB_PORT, 10),
+        username: process.env.DB_USERNAME,
+        password: process.env.DB_PASSWORD,
+        host: process.env.DB_HOST,
+        database: process.env.DB_NAME
+      })
     })
   ],
   controllers: [AppController],
