@@ -40,7 +40,7 @@ export class UsersService{
     return {
       id: 1234,
       firstName: 'Fred',
-      email: 'fred@user.com',
+      email: 'fred@user .com',
     }
   }
 }
