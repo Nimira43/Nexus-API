@@ -21,8 +21,9 @@ import { ConfigModule } from '@nestjs/config'
       synchronize: true,
       port: 5432,
       username: 'postgres',
-      password: process.env.DB_PASSWORD
-
+      password: process.env.DB_PASSWORD,
+      host: 'localhost',
+      database: 'nexus-api'
     })
   ],
   controllers: [AppController],
