@@ -13,7 +13,9 @@ import { TypeOrmModule } from '@nestjs/typeorm'
     AuthModule, 
     TypeOrmModule.forRoot({
       type: 'postgres',
-      entities: []
+      entities: [],
+      synchronize: true,
+      
     })
   ],
   controllers: [AppController],
