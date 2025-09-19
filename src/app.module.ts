@@ -6,6 +6,7 @@ import { PostsModule } from './posts/posts.module'
 import { AuthModule } from './auth/auth.module'
 import { TypeOrmModule } from '@nestjs/typeorm'
 import { ConfigModule } from '@nestjs/config'
+import { User } from './users/user.entity'
 
 @Module({
   imports: [
@@ -20,7 +21,9 @@ import { ConfigModule } from '@nestjs/config'
       inject: [],
       useFactory: () => ({
         type: 'postgres',
-        entities: [],
+        entities: [
+          User
+        ],
         synchronize: true,
         port: parseInt(process.env.DB_PORT, 10),
         username: process.env.DB_USERNAME,
