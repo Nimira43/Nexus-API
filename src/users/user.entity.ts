@@ -16,6 +16,7 @@ export class User {
     type: 'varchar',
     length: 96,
     nullable: true,
+    
   })
   lastName: string
   
@@ -26,6 +27,10 @@ export class User {
   })
   email: string
   
-  @Column()
+  @Column({
+    type: 'varchar',
+    length: 96,
+    nullable: false,
+  })
   password: string
 }
