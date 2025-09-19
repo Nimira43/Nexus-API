@@ -1,6 +1,8 @@
 import { Injectable, forwardRef, Inject } from '@nestjs/common'
 import { GetUsersParamDto } from '../dtos/get-users-param.dto'
 import { Repository } from 'typeorm'
+import { InjectRepository } from '@nestjs/typeorm'
+import { User } from '../user.entity'
 // import { AuthService } from 'src/auth/providers/auth.service'
 
 /**
@@ -9,7 +11,9 @@ import { Repository } from 'typeorm'
 @Injectable()
 export class UsersService{
   constructor(
-    private usersRepository: Repository<User>
+
+    @InjectRepository(User)
+    private usersRepository: Repository<User>,
   ) {}
   /**
    * The method to get all the users from the database
