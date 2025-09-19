@@ -1,5 +1,6 @@
 import { Injectable, forwardRef, Inject } from '@nestjs/common'
 import { GetUsersParamDto } from '../dtos/get-users-param.dto'
+import { Repository } from 'typeorm'
 // import { AuthService } from 'src/auth/providers/auth.service'
 
 /**
@@ -7,10 +8,9 @@ import { GetUsersParamDto } from '../dtos/get-users-param.dto'
  */
 @Injectable()
 export class UsersService{
-  // constructor(
-  //   @Inject(forwardRef(() => AuthService))
-  //   private readonly authService: AuthService
-  // ) {}
+  constructor(
+    private usersRepository: Repository<User>
+  ) {}
   /**
    * The method to get all the users from the database
    */
