@@ -12,7 +12,11 @@ export class User {
   })
   firstName: string
 
-  @Column()
+  @Column({
+    type: 'varchar',
+    length: 96,
+    nullable: true,
+  })
   lastName: string
   
   @Column()
