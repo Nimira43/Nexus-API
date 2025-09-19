@@ -15,11 +15,13 @@ export class CreateUserDto {
   
   @IsEmail()
   @IsNotEmpty()
+  @MaxLength(96)
   email: string
   
   @IsString()
   @IsNotEmpty()
   @MinLength(8)
+  @MaxLength(96)
   @Matches(/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/, {
     message:
       'Password must have a minimum of eight 8 character with at least 1 letter, 1 number and 1 symbol.'
