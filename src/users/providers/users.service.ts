@@ -14,6 +14,9 @@ export class UsersService{
     @InjectRepository(User)
     private usersRepository: Repository<User>,
   ) {}
+
+  public async createUser() {}
+
   /**
    * The method to get all the users from the database
    */
