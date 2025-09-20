@@ -16,7 +16,11 @@ export class UsersService{
     private usersRepository: Repository<User>,
   ) {}
 
-  public async createUser(createUsserDto: CreateUserDto) {}
+  public async createUser(createUserDto: CreateUserDto) {
+    const existingUser = await this.usersRepository.findOne({
+      where: {email: createUserDto.email}
+    })
+  }
 
   /**
    * The method to get all the users from the database
