@@ -3,6 +3,7 @@ import { GetUsersParamDto } from '../dtos/get-users-param.dto'
 import { Repository } from 'typeorm'
 import { InjectRepository } from '@nestjs/typeorm'
 import { User } from '../user.entity'
+import { CreateUserDto } from '../dtos/create-user.dto'
 
 /**
  * Class to connect to Users table and perform business operations
@@ -15,7 +16,7 @@ export class UsersService{
     private usersRepository: Repository<User>,
   ) {}
 
-  public async createUser() {}
+  public async createUser(createUsserDto: CreateUserDto) {}
 
   /**
    * The method to get all the users from the database
