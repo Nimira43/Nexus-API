@@ -22,6 +22,7 @@ export class UsersService{
     })
 
     let newUser = this.usersRepository.create(createUserDto)
+    newUser = await this.usersRepository.save(newUser)
   }
 
   /**
