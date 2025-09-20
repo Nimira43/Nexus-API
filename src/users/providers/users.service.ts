@@ -18,8 +18,10 @@ export class UsersService{
 
   public async createUser(createUserDto: CreateUserDto) {
     const existingUser = await this.usersRepository.findOne({
-      where: {email: createUserDto.email}
+      where: {email: createUserDto.email},
     })
+
+    let newUser = this.usersRepository.create()
   }
 
   /**
