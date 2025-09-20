@@ -21,7 +21,7 @@ export class UsersService{
       where: {email: createUserDto.email},
     })
 
-    let newUser = this.usersRepository.create()
+    let newUser = this.usersRepository.create(createUserDto)
   }
 
   /**
