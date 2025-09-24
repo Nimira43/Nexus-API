@@ -1,5 +1,5 @@
 import { ApiProperty, ApiPropertyOptional } from '@nestjs/swagger'
-import { IsJSON, IsNotEmpty, IsOptional, IsString, Matches, MaxLength, MinLength } from 'class-validator'
+import { IsJSON, IsNotEmpty, IsOptional, IsString, IsUrl, Matches, MaxLength, MinLength } from 'class-validator'
 
 export class CreateTagDto {
   @ApiProperty()
@@ -31,6 +31,8 @@ export class CreateTagDto {
   @IsJSON()
   schema?: string
   
-  
+  @ApiPropertyOptional()
+  @IsOptional()
+  @IsUrl()
   featuredImageUrl?: string
 }
