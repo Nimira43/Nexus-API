@@ -26,16 +26,20 @@ export class Tag {
     type: 'text',
     nullable: true,
   })
-  description: string
+  description?: string
   
   @Column({
     type: 'text',
     nullable: true,
   })
-  schema: string
+  schema?: string
   
-  
-  featuredImageUrl: string
+  @Column({
+    type: 'varchar',
+    length: 1924,
+    nullable: true,
+  })
+  featuredImageUrl?: string
   
   
   createDate: Date
