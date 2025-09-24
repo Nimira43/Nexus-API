@@ -46,10 +46,17 @@ export class Post {
   })
   content?: string
   
-  
+  @Column({
+    type: 'text',
+    nullable: true,
+  })
   schema?: string
   
-  
+  @Column({
+    type: 'varchar',
+    length: 1024,
+    nullable: true
+  })
   featuredImageUrl?: string
   
   
