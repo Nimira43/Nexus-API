@@ -40,7 +40,10 @@ export class Post {
   })
   status: postStatus
   
-  
+  @Column({
+    type: 'text',
+    nullable: true,
+  })
   content?: string
   
   
