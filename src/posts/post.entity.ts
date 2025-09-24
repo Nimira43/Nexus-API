@@ -67,7 +67,5 @@ export class Post {
   
   
   tags?: string[]
-  
-  
   metaOptions?: CreatePostMetaOptionsDto[]
 }
