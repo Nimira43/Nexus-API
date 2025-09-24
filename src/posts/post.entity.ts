@@ -24,7 +24,12 @@ export class Post {
   }) 
   postType: postType
 
-  
+  @Column({
+    type: 'varchar',
+    length: 256,
+    nullable: false,
+    unique: true
+  })
   slug: string
   
   
