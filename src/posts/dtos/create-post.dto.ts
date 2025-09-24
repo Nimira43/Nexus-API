@@ -66,6 +66,7 @@ export class CreatePostDto {
   })
   @IsOptional()
   @IsUrl()
+  @MaxLength(1024)
   featuredImageUrl?: string
   
   @ApiPropertyOptional({
