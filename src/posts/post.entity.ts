@@ -1,12 +1,21 @@
-import { Entity } from 'typeorm'
+import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm'
 import { postType } from './enums/postType.enum'
 import { postStatus } from './enums/postStatus.enum'
 import { CreatePostMetaOptionsDto } from './dtos/create-post-meta-options.dto'
 
 @Entity()
 export class Post {
+
+  @PrimaryGeneratedColumn()
   id: number
+
+  @Column({
+    type: 'varchar',
+    length: 512,
+    nullable: false
+  })
   title: string
+  
   postType: postType
   slug: string
   status: postStatus

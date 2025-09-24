@@ -12,6 +12,7 @@ export class CreatePostDto {
   })
   @IsString()
   @MinLength(4)
+  @MinLength(512)
   @IsNotEmpty()
   title: string
 
