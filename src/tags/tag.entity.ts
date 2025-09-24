@@ -8,5 +8,8 @@ export class Tag {
   description: string
   schema: string
   featuredImageUrl: string
+  createDate: Date
+  updateDate: Date
+  deletedAt: Date
 }
 
