@@ -7,6 +7,7 @@ import { AuthModule } from './auth/auth.module'
 import { TypeOrmModule } from '@nestjs/typeorm'
 import { ConfigModule } from '@nestjs/config'
 import { User } from './users/user.entity'
+import { TagsModule } from './tags/tags.module';
 
 @Module({
   imports: [
@@ -31,7 +32,7 @@ import { User } from './users/user.entity'
         host: process.env.DB_HOST,
         database: process.env.DB_NAME
       })
-    })
+    }), TagsModule
   ],
   controllers: [AppController],
   providers: [AppService],
