@@ -8,6 +8,7 @@ import { TypeOrmModule } from '@nestjs/typeorm'
 import { ConfigModule } from '@nestjs/config'
 import { User } from './users/user.entity'
 import { TagsModule } from './tags/tags.module';
+import { MetaOptionsModule } from './meta-options/meta-options.module';
 
 @Module({
   imports: [
@@ -32,7 +33,7 @@ import { TagsModule } from './tags/tags.module';
         host: process.env.DB_HOST,
         database: process.env.DB_NAME
       })
-    }), TagsModule
+    }), TagsModule, MetaOptionsModule
   ],
   controllers: [AppController],
   providers: [AppService],
