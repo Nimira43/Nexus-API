@@ -1,4 +1,4 @@
-import { Column, CreateDateColumn, Entity, PrimaryGeneratedColumn } from 'typeorm'
+import { Column, CreateDateColumn, Entity, PrimaryGeneratedColumn, UpdateDateColumn } from 'typeorm'
 
 @Entity()
 export class Tag {
@@ -44,7 +44,7 @@ export class Tag {
   @CreateDateColumn()
   createDate: Date
   
-  
+  @UpdateDateColumn()
   updateDate: Date
   
   
