@@ -32,7 +32,12 @@ export class Post {
   })
   slug: string
   
-  
+  @Column({
+    type: 'enum',
+    enum: postStatus,
+    nullable: false,
+    default: postStatus.DRAFT
+  })
   status: postStatus
   
   
