@@ -16,13 +16,35 @@ export class Post {
   })
   title: string
   
+  @Column({
+    type: 'enum',
+    enum: postType,
+    nullable: false,
+    default: postType.POST
+  }) 
   postType: postType
+
+  
   slug: string
+  
+  
   status: postStatus
+  
+  
   content?: string
+  
+  
   schema?: string
+  
+  
   featuredImageUrl?: string
+  
+  
   publishOn?: Date
+  
+  
   tags?: string[]
+  
+  
   metaOptions?: CreatePostMetaOptionsDto[]
 }
