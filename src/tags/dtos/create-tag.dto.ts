@@ -1,5 +1,5 @@
 import { ApiProperty } from '@nestjs/swagger'
-import { IsNotEmpty, IsString, MaxLength, MinLength } from 'class-validator'
+import { IsNotEmpty, IsString, Matches, MaxLength, MinLength } from 'class-validator'
 
 export class CreateTagDto {
   @ApiProperty()
@@ -9,7 +9,16 @@ export class CreateTagDto {
   @MaxLength(256)
   name: string
 
-  
+  @ApiProperty({
+    description: "Example slug (url): 'example-url'",
+    example: "my-blog-post"
+  })
+  @IsString()
+  @IsNotEmpty()
+  @Matches(/^[a-z0-9]+(?:-[a-z0-9]+)*$/, {
+    message: "A slug should be all small letters and use only '-' and no spaces. Example: 'my-url'."
+  })
+  @MaxLength(256)
   slug: string
   
   
