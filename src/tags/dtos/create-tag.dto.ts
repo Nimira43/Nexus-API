@@ -1,5 +1,5 @@
-import { ApiProperty } from '@nestjs/swagger'
-import { IsNotEmpty, IsString, Matches, MaxLength, MinLength } from 'class-validator'
+import { ApiProperty, ApiPropertyOptional } from '@nestjs/swagger'
+import { IsJSON, IsNotEmpty, IsOptional, IsString, Matches, MaxLength, MinLength } from 'class-validator'
 
 export class CreateTagDto {
   @ApiProperty()
@@ -21,10 +21,14 @@ export class CreateTagDto {
   @MaxLength(256)
   slug: string
   
-  
+  @ApiPropertyOptional()
+  @IsOptional()
+  @IsString()
   description?: string
   
-  
+  @ApiPropertyOptional()
+  @IsOptional()
+  @IsJSON()
   schema?: string
   
   
