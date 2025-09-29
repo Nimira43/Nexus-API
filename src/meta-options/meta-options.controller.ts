@@ -10,6 +10,9 @@ export class MetaOptionsController {
 
   @Post()
   public create(@Body() createPostMetaOptionsDto: CreatePostMetaOptionsDto) {
+    console.log('DTO received:', createPostMetaOptionsDto);
+  console.log('Is instance:', createPostMetaOptionsDto instanceof CreatePostMetaOptionsDto);
     return this.metaOptionsService.create(createPostMetaOptionsDto)
   }
+
 }

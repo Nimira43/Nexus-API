@@ -13,12 +13,8 @@ export class MetaOptionsService {
 
   public async create(createPostMetaOptionsDto: CreatePostMetaOptionsDto) {
     let metaOption = this.metaOptionsRepository.create(
-      createPostMetaOptionsDto,
+      createPostMetaOptionsDto
     )
-    // const metaOption = this.metaOptionsRepository.create({
-    //   metaValue: JSON.stringify(createPostMetaOptionsDto.metaValue),
-    // });
-
     
     return await this.metaOptionsRepository.save(metaOption)
   }
