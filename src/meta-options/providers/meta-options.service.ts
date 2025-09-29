@@ -15,5 +15,6 @@ export class MetaOptionsService {
     let metaOption = this.metaOptionsRepository.create(
       createPostMetaOptionsDto,
     )
+    return await this.metaOptionsRepository.save(metaOption)
   }
 }
