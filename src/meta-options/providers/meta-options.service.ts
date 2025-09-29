@@ -15,6 +15,11 @@ export class MetaOptionsService {
     let metaOption = this.metaOptionsRepository.create(
       createPostMetaOptionsDto,
     )
+    // const metaOption = this.metaOptionsRepository.create({
+    //   metaValue: JSON.stringify(createPostMetaOptionsDto.metaValue),
+    // });
+
+    
     return await this.metaOptionsRepository.save(metaOption)
   }
 }
