@@ -10,6 +10,6 @@ export class MetaOptionsController {
 
   @Post()
   public create(@Body() createPostMetaOptionsDto: CreatePostMetaOptionsDto) {
-
+    return this.metaOptionsService.create(createPostMetaOptionsDto)
   }
 }
