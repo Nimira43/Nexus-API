@@ -1,4 +1,4 @@
-import { Column, Entity, OneToOne, PrimaryGeneratedColumn } from 'typeorm'
+import { Column, Entity, JoinColumn, OneToOne, PrimaryGeneratedColumn } from 'typeorm'
 import { postType } from './enums/postType.enum'
 import { postStatus } from './enums/postStatus.enum'
 import { CreatePostMetaOptionsDto } from '../meta-options/dtos/create-post-meta-options.dto'
@@ -67,6 +67,7 @@ export class Post {
   publishOn?: Date
 
   @OneToOne(() => MetaOption)
+  @JoinColumn()
   metaOptions?: MetaOption
   
   tags?: string[]
