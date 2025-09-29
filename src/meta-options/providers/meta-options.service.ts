@@ -1,4 +1,6 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable } from '@nestjs/common'
 
 @Injectable()
-export class MetaOptionsService {}
+export class MetaOptionsService {
+  public async create() {}
+}
